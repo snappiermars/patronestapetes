@@ -1,4 +1,4 @@
-var sequence = [2, 3, 2, 3, 2, 3, 2, 3, 2, 3]; // Secuencia que el jugador debe seguir
+var sequence = [37,34,29,26,21,18,13,10,5,2]; // Secuencia que el jugador debe seguir
 var playerSequence = []; // Secuencia que el jugador ha presionado
 
 // Crear la cuadrícula
@@ -11,10 +11,10 @@ for (var i = 0; i < 40; i++) {
             if (this.classList.contains('active')) {
                 this.classList.remove('active');
                 this.classList.add('desactive');
-                playerSequence.pop(index % 4 + 1);
+                playerSequence.pop(index);
             } else {
                 this.classList.add('active');
-                playerSequence.push(index % 4 + 1);
+                playerSequence.push(index);
             }
         }
     })(i));
@@ -26,8 +26,10 @@ for (var i = 0; i < 40; i++) {
 function checkSequence() {
     if (JSON.stringify(sequence) === JSON.stringify(playerSequence)) {
         alert('¡Has ganado!');
+        console.log(JSON.stringify(playerSequence));
     } else {
         alert('Has perdido. Intenta de nuevo.');
+        console.log(JSON.stringify(playerSequence));
     }
     playerSequence = [];
     var cells = document.getElementsByClassName('cell');
