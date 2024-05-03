@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#gameContainer {
+    width: 400px;
+    height: 600px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    cursor: pointer;
+    transition: top 1s linear;
+}
+
+.black {
+    background-color: black;
+}
+
+#score {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
