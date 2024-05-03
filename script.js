@@ -8,12 +8,19 @@ for (var i = 0; i < 40; i++) {
     cell.classList.add('cell');
     cell.addEventListener('click', (function (index) {
         return function () {
-            this.classList.add('active');
-            playerSequence.push(index % 4 + 1);
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+                this.classList.add('desactive');
+                playerSequence.pop(index % 4 + 1);
+            } else {
+                this.classList.add('active');
+                playerSequence.push(index % 4 + 1);
+            }
         }
     })(i));
     grid.appendChild(cell);
 }
+
 
 // Verificar la secuencia
 function checkSequence() {
