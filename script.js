@@ -1,4 +1,4 @@
-var sequence = [1, 2, 3, 4]; // Secuencia que el jugador debe seguir
+var sequence = [2, 3, 2, 3, 2, 3, 2, 3, 2, 3]; // Secuencia que el jugador debe seguir
 var playerSequence = []; // Secuencia que el jugador ha presionado
 
 // Crear la cuadrícula
